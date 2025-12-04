@@ -1,7 +1,7 @@
 package com.example.check_access_log.testPartition.controller;
 
-import com.example.check_access_log.testPartition.dto.request.AccessLogRequest;
-import com.example.check_access_log.testPartition.dto.response.AccessLogResponse;
+import com.example.check_access_log.testPartition.domain.dto.request.AccessLogRequest;
+import com.example.check_access_log.testPartition.domain.dto.response.AccessLogResponse;
 import com.example.check_access_log.testPartition.service.AccessLogService;
 import com.example.check_access_log.global.annotation.MethodInfoLogging;
 import lombok.RequiredArgsConstructor;

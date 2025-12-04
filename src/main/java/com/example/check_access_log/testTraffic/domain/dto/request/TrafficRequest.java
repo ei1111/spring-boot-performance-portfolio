@@ -1,6 +1,6 @@
-package com.example.check_access_log.testTraffic.dto.request;
+package com.example.check_access_log.testTraffic.domain.dto.request;
 
-import com.example.check_access_log.testTraffic.dto.entity.Traffic;
+import com.example.check_access_log.testTraffic.domain.entity.Traffic;
 import lombok.Getter;
 
 

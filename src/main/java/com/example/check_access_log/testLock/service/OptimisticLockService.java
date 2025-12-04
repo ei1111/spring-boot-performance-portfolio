@@ -1,6 +1,6 @@
 package com.example.check_access_log.testLock.service;
 
-import com.example.check_access_log.testLock.dto.entity.TestLock;
+import com.example.check_access_log.testLock.domain.entity.TestLock;
 import com.example.check_access_log.testLock.repository.LockRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

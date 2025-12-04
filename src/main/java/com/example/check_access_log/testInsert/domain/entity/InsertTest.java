@@ -1,6 +1,6 @@
-package com.example.check_access_log.testInsert.dto.entity;
+package com.example.check_access_log.testInsert.domain.entity;
 
-import com.example.check_access_log.testPartition.dto.entity.AccessLog;
+import com.example.check_access_log.testPartition.domain.entity.AccessLog;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

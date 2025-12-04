@@ -1,6 +1,6 @@
 package com.example.check_access_log.testPartition.repository;
 
-import com.example.check_access_log.testPartition.dto.entity.AccessLog;
+import com.example.check_access_log.testPartition.domain.entity.AccessLog;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

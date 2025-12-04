@@ -1,8 +1,8 @@
 package com.example.check_access_log.testPartition.service;
 
-import com.example.check_access_log.testPartition.dto.entity.AccessLog;
-import com.example.check_access_log.testPartition.dto.request.AccessLogRequest;
-import com.example.check_access_log.testPartition.dto.response.AccessLogResponse;
+import com.example.check_access_log.testPartition.domain.entity.AccessLog;
+import com.example.check_access_log.testPartition.domain.dto.request.AccessLogRequest;
+import com.example.check_access_log.testPartition.domain.dto.response.AccessLogResponse;
 import com.example.check_access_log.testPartition.repository.AccessLogRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

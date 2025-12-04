@@ -2,7 +2,7 @@ package com.example.check_access_log.testTraffic.controller;
 
 
 
-import com.example.check_access_log.testTraffic.dto.request.TrafficRequest;
+import com.example.check_access_log.testTraffic.domain.dto.request.TrafficRequest;
 import com.example.check_access_log.testTraffic.service.RedisQueueService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

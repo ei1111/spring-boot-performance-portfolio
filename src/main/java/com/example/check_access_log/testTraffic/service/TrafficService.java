@@ -2,8 +2,8 @@ package com.example.check_access_log.testTraffic.service;
 
 
 import com.example.check_access_log.global.config.reids.CustomObjectMapper;
-import com.example.check_access_log.testTraffic.dto.entity.Traffic;
-import com.example.check_access_log.testTraffic.dto.request.TrafficRequest;
+import com.example.check_access_log.testTraffic.domain.entity.Traffic;
+import com.example.check_access_log.testTraffic.domain.dto.request.TrafficRequest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,6 +1,6 @@
 package com.example.check_access_log.testLock.repository;
 
-import com.example.check_access_log.testLock.dto.entity.TestLock;
+import com.example.check_access_log.testLock.domain.entity.TestLock;
 import jakarta.persistence.LockModeType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Lock;

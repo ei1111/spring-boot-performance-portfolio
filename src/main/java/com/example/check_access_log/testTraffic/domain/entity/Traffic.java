@@ -1,4 +1,4 @@
-package com.example.check_access_log.testTraffic.dto.entity;
+package com.example.check_access_log.testTraffic.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

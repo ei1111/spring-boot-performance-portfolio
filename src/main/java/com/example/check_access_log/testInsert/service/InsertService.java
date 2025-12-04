@@ -1,8 +1,8 @@
 package com.example.check_access_log.testInsert.service;
 
-import com.example.check_access_log.testInsert.dto.entity.InsertTest;
+import com.example.check_access_log.testInsert.domain.entity.InsertTest;
 import com.example.check_access_log.testInsert.repository.InsertRepository;
-import com.example.check_access_log.testPartition.dto.entity.AccessLog;
+import com.example.check_access_log.testPartition.domain.entity.AccessLog;
 import com.example.check_access_log.testPartition.repository.AccessLogRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;

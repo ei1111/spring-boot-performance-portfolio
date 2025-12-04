@@ -1,4 +1,4 @@
-package com.example.check_access_log.testLock.dto.entity;
+package com.example.check_access_log.testLock.domain.entity;
 
 import lombok.RequiredArgsConstructor;
 

@@ -1,7 +1,7 @@
 package com.example.check_access_log.testLock.controller;
 
 import com.example.check_access_log.global.annotation.MethodInfoLogging;
-import com.example.check_access_log.testLock.dto.entity.LockType;
+import com.example.check_access_log.testLock.domain.entity.LockType;
 import com.example.check_access_log.testLock.lockFacede.OptimisticLockStockFacade;
 import com.example.check_access_log.testLock.service.JavaLockService;
 import com.example.check_access_log.testLock.service.NoLockService;

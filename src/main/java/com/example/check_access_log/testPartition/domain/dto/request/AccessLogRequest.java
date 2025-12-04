@@ -1,4 +1,4 @@
-package com.example.check_access_log.testPartition.dto.request;
+package com.example.check_access_log.testPartition.domain.dto.request;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;

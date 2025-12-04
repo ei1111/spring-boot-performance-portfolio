@@ -1,6 +1,6 @@
-package com.example.check_access_log.testPartition.dto.entity;
+package com.example.check_access_log.testPartition.domain.entity;
 
-import com.example.check_access_log.testPartition.dto.response.AccessLogResponse;
+import com.example.check_access_log.testPartition.domain.dto.response.AccessLogResponse;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -2,7 +2,7 @@ package com.example.check_access_log.testTraffic.service;
 
 
 import com.example.check_access_log.global.config.reids.CustomObjectMapper;
-import com.example.check_access_log.testTraffic.dto.request.TrafficRequest;
+import com.example.check_access_log.testTraffic.domain.dto.request.TrafficRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.StringRedisTemplate;

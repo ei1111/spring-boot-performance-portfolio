@@ -1,4 +1,4 @@
-package com.example.check_access_log.testPartition.dto.response;
+package com.example.check_access_log.testPartition.domain.dto.response;
 
 import java.time.LocalDateTime;
 
