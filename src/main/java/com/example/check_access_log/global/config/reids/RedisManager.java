@@ -1,6 +1,8 @@
 package com.example.check_access_log.global.config.reids;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JavaType;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
@@ -28,6 +30,21 @@ public class RedisManager {
         }
     }
 
+    public <T> List<T> getList(RedisKeyPrefix keyPrefix, Long id, Class<T> elementType) {
+        String jsonString = redisTemplate.opsForValue().get(generateCacheKey(keyPrefix, id));
+
+        if (jsonString == null) {
+            return null;
+        }
+
+        try {
+            JavaType listType = customObjectMapper.getTypeFactory().constructCollectionType(List.class, elementType);
+
+            return customObjectMapper.readValue(jsonString, listType);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public <T> void set(RedisKeyPrefix keyPrefix, Long id, T data) {
         try {
@@ -45,6 +62,10 @@ public class RedisManager {
 
     private String generateCacheKey(RedisKeyPrefix keyPrefix, Long id) {
         return keyPrefix.getPrefix() + id;
+    }
+
+    public void expire(RedisKeyPrefix keyPrefix, Long month, Duration ttl) {
+        redisTemplate.expire(generateCacheKey(keyPrefix, month), ttl);
     }
 
     public void delete(RedisKeyPrefix keyPrefix, Long id) {
