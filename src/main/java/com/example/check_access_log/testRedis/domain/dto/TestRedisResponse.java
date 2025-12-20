@@ -10,6 +10,6 @@ public record TestRedisResponse(
         LocalDateTime eventTime
 ) {
     public static TestRedisOther from(TestRedisResponse response) {
-        return new TestRedisOther(response.name, response.eventTime);
+        return TestRedisOther.of(response.name, response.eventTime);
     }
 }

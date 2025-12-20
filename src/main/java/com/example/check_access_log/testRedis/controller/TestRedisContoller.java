@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-
+/*
+* 30만건 데이터로 테스트
+* */
 @RestController
 @RequiredArgsConstructor
 public class TestRedisContoller {
