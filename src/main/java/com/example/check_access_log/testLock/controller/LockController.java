@@ -22,28 +22,26 @@ public class LockController {
     private final OptimisticLockStockFacade optimisticLockStockFacade;
     private final PessimisticLockService pessimisticService;
 
-    @MethodInfoLogging(description = "락이 없는 경우")
     @GetMapping("/noLock")
+    @MethodInfoLogging(description = "락이 없는 경우")
     public void noLock() throws InterruptedException {
         lockTest(LockType.NO);
     }
 
-
-    @MethodInfoLogging(description = "자바 synchronized 경우")
     @GetMapping("/javaLock")
+    @MethodInfoLogging(description = "자바 synchronized 경우")
     public void javaLock() throws InterruptedException {
         lockTest(LockType.JAVA_SYNCHRONIZED);
     }
 
-
-    @MethodInfoLogging(description = "비관적락 경우")
     @GetMapping("/pessimisticLock")
+    @MethodInfoLogging(description = "비관적락 경우")
     public void pessimisticLock() throws InterruptedException {
         lockTest(LockType.PESSIMISTIC);
     }
 
-    @MethodInfoLogging(description = "낙관적락 경우")
     @GetMapping("/optimisitcLock")
+    @MethodInfoLogging(description = "낙관적락 경우")
     public void optimisitcLock() throws InterruptedException {
         lockTest(LockType.OPTIMISTIC);
     }

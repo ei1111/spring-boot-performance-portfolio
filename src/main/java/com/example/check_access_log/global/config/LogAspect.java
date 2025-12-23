@@ -11,13 +11,10 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
 @Slf4j
-@Component
 @Aspect
+@Component
 @RequiredArgsConstructor
 public class LogAspect {
-
-    private final HttpServletRequest request;
-
     /**
      * 메소드 작업 진행 경과 시간을 log에 출력해준다.
      * <pre>
@@ -47,8 +44,6 @@ public class LogAspect {
         log.info("Description : {}", target.description());
         log.info("Args : {}", pjp.getArgs());
 
-
-
         long beforeTime = System.currentTimeMillis(); //코드 실행 전에 시간 받아오기
 
         Object retVal = pjp.proceed();
@@ -60,7 +55,4 @@ public class LogAspect {
 
         return retVal;
     }
-
-
-
 }

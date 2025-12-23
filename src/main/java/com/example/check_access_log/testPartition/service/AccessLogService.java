@@ -21,7 +21,7 @@ public class AccessLogService {
     public List<AccessLogResponse> findTheDate(AccessLogRequest accessLogRequest) {
         List<AccessLog> accessLogs = accessLogRepository.findAccessLogByStartTimeAndEndTime(accessLogRequest.startTime(), accessLogRequest.endTime());
         return accessLogs.stream()
-                .map(v -> v.toResponse())
+                .map(AccessLog::toResponse)
                 .toList();
     }
 }
