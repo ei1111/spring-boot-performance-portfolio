@@ -1,6 +1,6 @@
 package com.example.check_access_log.testPool.controller;
 
-import com.example.check_access_log.global.annotation.MethodInfoLogging;
+import com.example.check_access_log.global.annotation.LogMethodExecution;
 import com.example.check_access_log.testPool.service.TestPoolService;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class TestpoolController {
     private final TestPoolService testPoolService;
 
     @GetMapping("/test/hikari/async")
-    @MethodInfoLogging(description = "커넥션 풀 테스트")
+    @LogMethodExecution(description = "커넥션 풀 테스트")
     public String asyncTest() {
         List<CompletableFuture<String>> futures = new ArrayList<>();
 

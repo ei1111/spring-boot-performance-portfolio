@@ -1,7 +1,7 @@
 package com.example.check_access_log.testNplusOne.controller;
 
 
-import com.example.check_access_log.global.annotation.MethodInfoLogging;
+import com.example.check_access_log.global.annotation.LogMethodExecution;
 import com.example.check_access_log.testNplusOne.service.TeamService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,19 +15,19 @@ public class TeamController {
     private final TeamService teamService;
 
     @GetMapping("/nPlus")
-    @MethodInfoLogging(description = "n Plus one 문제 발생")
+    @LogMethodExecution(description = "n Plus one 문제 발생")
     public List<String> nPlusTest() {
         return teamService.findAllTeamMemberNicknames();
     }
 
     @GetMapping("/fetchJoin")
-    @MethodInfoLogging(description = "fetchJoin 사용")
+    @LogMethodExecution(description = "fetchJoin 사용")
     public List<String> fetchJoinTest() {
         return teamService.findAllTeamMemberNicknamesFetchJoin();
     }
 
     @GetMapping("/entityGraph")
-    @MethodInfoLogging(description = "entityGraph 사용")
+    @LogMethodExecution(description = "entityGraph 사용")
     public List<String> entityGraphTest() {
         return teamService.findAllTeamMemberNicknamesByEntityGraph();
     }

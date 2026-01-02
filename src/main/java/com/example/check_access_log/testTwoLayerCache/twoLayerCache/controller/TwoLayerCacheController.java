@@ -1,7 +1,7 @@
 package com.example.check_access_log.testTwoLayerCache.twoLayerCache.controller;
 
 
-import com.example.check_access_log.global.annotation.MethodInfoLogging;
+import com.example.check_access_log.global.annotation.LogMethodExecution;
 import com.example.check_access_log.testTwoLayerCache.twoLayerCache.service.TwoLayerCacheService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +14,7 @@ public class TwoLayerCacheController {
     private final TwoLayerCacheService twoLayerCacheService;
 
     @GetMapping("/twoLayerCache/{id}")
-    @MethodInfoLogging(description = "2 Layer Cache 조회")
+    @LogMethodExecution(description = "2 Layer Cache 조회")
     public String findTwoLayerCache(@PathVariable Long id) {
         return twoLayerCacheService.findById(id);
     }

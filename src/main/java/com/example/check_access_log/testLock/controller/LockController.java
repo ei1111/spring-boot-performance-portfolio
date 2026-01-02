@@ -1,6 +1,6 @@
 package com.example.check_access_log.testLock.controller;
 
-import com.example.check_access_log.global.annotation.MethodInfoLogging;
+import com.example.check_access_log.global.annotation.LogMethodExecution;
 import com.example.check_access_log.testLock.domain.entity.LockType;
 import com.example.check_access_log.testLock.lockFacede.OptimisticLockStockFacade;
 import com.example.check_access_log.testLock.service.JavaLockService;
@@ -23,25 +23,25 @@ public class LockController {
     private final PessimisticLockService pessimisticService;
 
     @GetMapping("/noLock")
-    @MethodInfoLogging(description = "락이 없는 경우")
+    @LogMethodExecution(description = "락이 없는 경우")
     public void noLock() throws InterruptedException {
         lockTest(LockType.NO);
     }
 
     @GetMapping("/javaLock")
-    @MethodInfoLogging(description = "자바 synchronized 경우")
+    @LogMethodExecution(description = "자바 synchronized 경우")
     public void javaLock() throws InterruptedException {
         lockTest(LockType.JAVA_SYNCHRONIZED);
     }
 
     @GetMapping("/pessimisticLock")
-    @MethodInfoLogging(description = "비관적락 경우")
+    @LogMethodExecution(description = "비관적락 경우")
     public void pessimisticLock() throws InterruptedException {
         lockTest(LockType.PESSIMISTIC);
     }
 
     @GetMapping("/optimisitcLock")
-    @MethodInfoLogging(description = "낙관적락 경우")
+    @LogMethodExecution(description = "낙관적락 경우")
     public void optimisitcLock() throws InterruptedException {
         lockTest(LockType.OPTIMISTIC);
     }

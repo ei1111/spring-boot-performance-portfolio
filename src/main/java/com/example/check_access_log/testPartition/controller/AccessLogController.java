@@ -1,9 +1,9 @@
 package com.example.check_access_log.testPartition.controller;
 
+import com.example.check_access_log.global.annotation.LogMethodExecution;
 import com.example.check_access_log.testPartition.domain.dto.request.AccessLogRequest;
 import com.example.check_access_log.testPartition.domain.dto.response.AccessLogResponse;
 import com.example.check_access_log.testPartition.service.AccessLogService;
-import com.example.check_access_log.global.annotation.MethodInfoLogging;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +18,7 @@ public class AccessLogController {
 
    
     @PostMapping(value = "/access")
-    @MethodInfoLogging(description = "데이터 조회")
+    @LogMethodExecution(description = "데이터 조회")
     public List<AccessLogResponse> findDataFromDate(@RequestBody AccessLogRequest accessLogRequest) {
         return accessLogService.findTheDate(accessLogRequest);
     }
